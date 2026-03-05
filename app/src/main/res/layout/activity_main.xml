@@ -40,6 +40,22 @@
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
             android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/counterText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Increase Counter" />
     </LinearLayout>
 
 </LinearLayout>

@@ -13,6 +13,11 @@ public class MainActivity extends AppCompatActivity {
     TextView myText;
     Button myButton;
 
+    private static final String COUNT_KEY = "COUNT_KEY";
+    TextView counterText;
+    Button btnPlus;
+    int mCounter = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,5 +39,27 @@ public class MainActivity extends AppCompatActivity {
                 myText.setText("Dr. Angie");
             }
         });
+
+        counterText = findViewById(R.id.counterText);
+        btnPlus = findViewById(R.id.btnPlus);
+
+        if (savedInstanceState != null) {
+            mCounter = savedInstanceState.getInt(COUNT_KEY, 0);
+        }
+        counterText.setText(String.valueOf(mCounter));
+
+        btnPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCounter++;
+                counterText.setText(String.valueOf(mCounter));
+            }
+        });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(COUNT_KEY, mCounter);
     }
 }
