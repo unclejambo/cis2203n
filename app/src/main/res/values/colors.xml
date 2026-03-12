@@ -1,0 +1,9 @@
+<resources>
+    <color name="app_background">#808080</color>
+    <color name="display_black">#111111</color>
+    <color name="neon_green">#39FF14</color>
+    <color name="olive_green">#6B8E23</color>
+    <color name="pink_equals">#6B8E23</color>
+    <color name="text_dark">#000000</color>
+    <color name="text_light">#FFFFFF</color>
+</resources>
